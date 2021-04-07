@@ -21,6 +21,7 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+project.setProperty('target-platform', 'android-x86')
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -46,7 +47,8 @@ android {
 
 
         ndk {
-            abiFilters "armeabi-v7a"
+//            abiFilters "armeabi-v7a"
+            abiFilters "x86","armeabi-v7a"
         }
     }
     signingConfigs {

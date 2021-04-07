@@ -15,7 +15,7 @@ class Routes {
 
   static const String barChart = "/barChart";  // 柱状图
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = emptyHandler;
     router.define(root, handler: rootHandler);
     router.define(demoSimple, handler: demoRouteHandler);
